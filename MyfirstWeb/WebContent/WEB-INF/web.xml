@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name></display-name>
+  <welcome-file-list>
+    <welcome-file>NewFile.html</welcome-file><!-- 定义默认的启动页 -->
+  </welcome-file-list>
+  
+  <servlet-mapping>
+  <!-- 2、通过URL找到这个servlet-name 格式：自定义的名称，通常为类名-->
+  	<servlet-name>MyServlet01</servlet-name>
+  	<!--1、 自定义一个URL路径 -->
+  	<url-pattern>/ggg/mysss</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <!-- 3、格式：自定义的名称，通常为类名，注意要跟servlet-mapping里的servlet-name一致-->
+  	<servlet-name>MyServlet01</servlet-name>  	
+  	<!--4、 通过servlet-name找到对应的java类 -->
+  	<servlet-class>myServlet.MyServlet01</servlet-class><!-- 格式：包名.类名 -->
+  </servlet>
+  
+  
+</web-app>
